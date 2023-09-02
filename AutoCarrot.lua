@@ -204,8 +204,8 @@ f:SetScript('OnEvent', function(self, event, ...)
             AutoCarrotDB.trinketSlot1 = false
         end
         for bag = 0, NUM_BAG_SLOTS do
-            for slot = 0, GetContainerNumSlots(bag) do
-                local link = GetContainerItemLink(bag, slot)
+            for slot = 0, C_Container.GetContainerNumSlots(bag) do
+                local link = C_Container.GetContainerItemLink(bag, slot)
                 if(link) then
                     local sItemId, enchantId = link:match("item:(%d+):(%d*)")
                     if(sItemId == "25653" or sItemId == "32863") then
